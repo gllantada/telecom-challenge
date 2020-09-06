@@ -1,0 +1,56 @@
+@import "./variables.scss";
+// este es el css como no es mucho esta todo encerrado aca
+//puse algunas variables a disposicion para que los cambios se gestionen directamnte en las variables
+
+body {
+  background-color: $background;
+  color: $fontColor;
+  max-width: $maxWidth;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+.pending {
+  width: 100%;
+  padding-top: 100px;
+  text-align: center;
+  * {
+    color: rgb(38, 107, 101);
+  }
+}
+.day {
+  width: 80%;
+
+  margin: 20px auto;
+  border: solid 2px grey;
+  background-color: rgb(38, 107, 101);
+  color: $background;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  padding-left: 20px;
+  overflow-x: scroll;
+  h3 {
+    text-align: center;
+    flex-grow: initial;
+  }
+  span {
+    display: flex;
+    flex: 1;
+    .partial {
+      padding: 20px;
+      &:hover {
+        background-color: rgb(76, 207, 196);
+        transform: scale(1.4);
+      }
+      display: inline-block;
+      flex: 1;
+      border: solid 1px $background;
+      margin: 20px 0;
+      h5 {
+        text-align: center;
+      }
+    }
+  }
+}
