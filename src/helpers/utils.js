@@ -1,3 +1,4 @@
+//esta funcion dada la lista entera sin discriminar dias las devuelve agrupadas por dia
 export const groupByDay = (list) => {
   let day = new Date(list[0].dt_txt).getDate();
   let index = 0;
@@ -14,6 +15,8 @@ export const groupByDay = (list) => {
   });
   return rta;
 };
+
+//esto arma objeto segun geolicalizacion devuelve latitude y longitude estructurado para servicio
 export const getCurrentLocation = (geolocation) => {
   const { latitude, longitude } = geolocation.coords;
   return {
