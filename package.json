@@ -11,13 +11,15 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
     "date-fns": "^2.16.1",
+    "env": "0.0.2",
+    "getenv": "^1.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "APPID=44a378efaf42169641bf073bd97e457a react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

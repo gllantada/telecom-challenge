@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { APPID } from "./../config";
 const headers = {
   // "Sec-Fetch-Mode": "cors"
 };
@@ -18,7 +18,7 @@ const instance = axios.create({
 export const getByCords = (cords, callbackSucces, callbackError) => {
   instance
     .get(
-      `/forecast?groupby=date,uk&lat=${cords.latitude}&lon=${cords.longitude}&APPID=44a378efaf42169641bf073bd97e457a&lang=es&units=metric`,
+      `/forecast?groupby=date,uk&lat=${cords.latitude}&lon=${cords.longitude}&APPID=${APPID}&lang=es&units=metric`,
       { headers }
     )
     .then((data) => {
@@ -32,7 +32,7 @@ export const getByCords = (cords, callbackSucces, callbackError) => {
 export const getByCity = (text, callbackSucces, callbackError) => {
   instance
     .get(
-      `/forecast?q=${text},groupby=date,type=like,uk&APPID=44a378efaf42169641bf073bd97e457a&lang=es&units=metric`,
+      `/forecast?q=${text},groupby=date,type=like,uk&APPID=${APPID}&lang=es&units=metric`,
       { headers }
     )
     .then((data) => {
